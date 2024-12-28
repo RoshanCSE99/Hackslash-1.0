@@ -34,89 +34,48 @@ html, body{
 
 .index-content p{
     font-size: 1.125rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
 }
 
-.index-content-div-1{
+.index-content-div{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.index-content-div-1 a:nth-child(1){
-    background-color: #3B82F6;
+.index-content-div a{
+    font-size: 1.2rem;
+    text-transform: uppercase;
     color: #FFFFFF;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     text-decoration: none;
     border-radius: 1rem;
 }
 
-.index-content-div-1 a:nth-child(2){
+.index-content-div a:nth-child(1){
+    background-color: #3B82F6;
+}
+
+.index-content-div a:nth-child(2){
     background-color: #10B981;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 1rem;
 }
 
-.index-content-div-1 a:nth-child(3){
+.index-content-div a:nth-child(3){
     background-color: #EF4444;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 1rem;
 }
 
-.index-content-div-1 a:nth-child(4){
+.index-content-div a:nth-child(4){
     background-color: #F59E0B;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 1rem;
 }
-.index-content-div-1 a:nth-child(5){
+.index-content-div a:nth-child(5){
     background-color: #009688;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 1rem;
 }
-.index-content-div-1 a:nth-child(6){
+.index-content-div a:nth-child(6){
     background-color: #673AB7;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 1rem;
 }
-.index-content-div-1 a:nth-child(7){
+.index-content-div a:nth-child(7){
     background-color: #D500F9;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 1rem;
 }
-
-.index-content-div-2{
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.index-content-div-2 a{
-    background-color: #3B82F6;
-    color: #FFFFFF;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    &:hover {
-        background-color: #2563EB;
-    }
-}
-
 
 .login-body, .signup-body, .category-body, .quiz-category-body, .result-body{
     background-color: #F7FAFC;
@@ -243,19 +202,19 @@ html, body{
     background-image: url('./Images/Politics.jpg');
 }
 
-.Famous_People{
+.Famous_Persons{
     background-image: url('./Images/Famous_People.jpg');
 }
 
 .Inventions{
-    background-image: url('./Images/Inventions.jpg');
+    background-image: url('./Images/Inventions.webp');
 }
 
 .Space{
     background-image: url('./Images/Space.jpg');
 }
 
-.History, .Geography, .Current_Affairs, .Politics, .Famous_People, .Inventions, .Space{
+.History, .Geography, .Current_Affairs, .Politics, .Famous_Persons, .Inventions, .Space{
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -293,7 +252,7 @@ html, body{
 
 .quiz-category-container-buttons{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 .quiz-category-container  button{

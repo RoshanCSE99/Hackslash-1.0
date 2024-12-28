@@ -6,31 +6,31 @@
     <title>Quiz - Famous Persons</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="quiz-category-body Famous_People">
+<body class="quiz-category-body Famous_Persons">
     <div class="quiz-category-container">
         <h1>Famous Persons Quiz</h1>
         <form>
             <div class="quiz-category-container-question">
                 <p>
                     Question <span class="question-number">1</span>: 
-                    <span class="question"> Who was the first person to win two Nobel Prizes in two different scientific fields?</span>
+                    <span class="question">Who was the first woman to win a Nobel Prize?</span>
                 </p>
-                <div>
-                    <input type="radio" id="q1a1" name="q1" value="Marie Curie">
+                <div class="options-container">
+                    <input type="radio" id="q1a1">
                     <label for="q1a1">Marie Curie</label><br>
-                    <input type="radio" id="q1a2" name="q1" value="Albert Einstein">
-                    <label for="q1a2">Albert Einstein</label><br>
-                    <input type="radio" id="q1a3" name="q1" value=" Linus Pauling">
-                    <label for="q1a3">Linus Pauling</label><br>
-                    <input type="radio" id="q1a4" name="q1" value="Boutros Boutros-Ghali">
-                    <label for="q1a4">Boutros Boutros-Ghali</label>
+                    <input type="radio" id="q1a2">
+                    <label for="q1a2">Dorothy Crowfoot Hodgkin</label><br>
+                    <input type="radio" id="q1a3">
+                    <label for="q1a3">Rosalind Franklin</label><br>
+                    <input type="radio" id="q1a4">
+                    <label for="q1a4">Mother Teresa</label>
                 </div>
             </div>
             <div class="quiz-category-container-buttons">
-                <button type="button">Previous</button>
-                <button type="submit">Submit</button>
+                <button class="next-button" type="button">Next</button>
             </div>
         </form>
     </div>
+    <script src="script_famous_persons.js"></script>
 </body>
 </html>

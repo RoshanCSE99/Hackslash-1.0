@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Geography</title>
     <link rel="stylesheet" href="style.css">
-      <style>
-        body{
-            background-image: url(https://files.oaiusercontent.com/file-9kQAebWQEZ7SRB2Qn1Hpnt?se=2024-12-28T05%3A26%3A10Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df3f9c4bd-077f-4e86-9bb4-0ecc749bbf45.webp&sig=GEQUzZt%2Bjf8WC9xW9Tg2he68LjmO7W7xwAKF9vxJw2U%3D);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-    </style>
 </head>
 <body class="quiz-category-body Geography">
     <div class="quiz-category-container">
@@ -22,24 +13,24 @@
             <div class="quiz-category-container-question">
                 <p>
                     Question <span class="question-number">1</span>:
-                    <span class="question">What is the highest mountain in the world?</span>
+                    <span class="question">Which country has the most natural lakes in the world?</span>
                 </p>
-                <div>
-                    <input type="radio" id="q1a1" name="q1" value="Mount Kilimanjaro">
-                    <label for="q1a1">Mount Kilimanjaro</label><br>
-                    <input type="radio" id="q1a2" name="q1" value="Mount Everest">
-                    <label for="q1a2">Mount Everest</label><br>
-                    <input type="radio" id="q1a3" name="q1" value="K2">
-                    <label for="q1a3">K2</label><br>
-                    <input type="radio" id="q1a4" name="q1" value="Mount Fuji">
-                    <label for="q1a4">Mount Fuji</label>
+                <div class="options-container">
+                    <input type="radio" id="q1a1">
+                    <label for="q1a1">Canada</label><br>
+                    <input type="radio" id="q1a2">
+                    <label for="q1a2">Russia</label><br>
+                    <input type="radio" id="q1a3">
+                    <label for="q1a3">United States</label><br>
+                    <input type="radio" id="q1a4">
+                    <label for="q1a4">Brazil</label>
                 </div>
             </div>
             <div class="quiz-category-container-buttons">
-                <button type="button">Previous</button>
-                <button type="submit">Submit</button>
+                <button class="next-button" type="button">Next</button>
             </div>
         </form>
     </div>
+    <script src="script_geography.js"></script>
 </body>
 </html>
