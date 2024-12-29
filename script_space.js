@@ -54,6 +54,7 @@ const spaceQuestions = [
 let currentQuestionIndex = 0;
 const selectedAnswers = {};
 let score = 0;
+let checkMode = true;
 
 function displayQuestion() {
     const quesNumber = document.querySelector('.question-number');
@@ -75,31 +76,43 @@ function displayQuestion() {
         optionsContainer.appendChild(optionElement);
     });
 
-    if (currentQuestionIndex === spaceQuestions.length - 1) {
-        nextButton.textContent = 'Submit';
-    } else {
-        nextButton.textContent = 'Next';
-    }
+    nextButton.textContent = 'Check';
+    checkMode = true;
 }
-
 
 function nextQuestion() {
     const selectedOption = document.querySelector(`input[name="q${currentQuestionIndex + 1}"]:checked`);
-    if (selectedOption) {
-        selectedAnswers[`q${currentQuestionIndex + 1}`] = selectedOption.value;
+    const nextButton = document.querySelector('.next-button');
 
-        if (selectedOption.value === spaceQuestions[currentQuestionIndex].correctOption) {
-            score++;
+    if (checkMode) {
+        if (selectedOption) {
+            selectedAnswers[`q${currentQuestionIndex + 1}`] = selectedOption.value;
+
+            if (selectedOption.value === spaceQuestions[currentQuestionIndex].correctOption) {
+                score++;
+            }
+
+            document.querySelector('.score').textContent = `Score: ${score}`;
+            selectedOption.labels[0].style.color = selectedOption.value === spaceQuestions[currentQuestionIndex].correctOption ? 'green' : 'red';
+
+            spaceQuestions[currentQuestionIndex].options.forEach((option, index) => {
+                if (option === spaceQuestions[currentQuestionIndex].correctOption) {
+                    document.querySelector(`#q${currentQuestionIndex + 1}a${index + 1}`).labels[0].style.color = 'green';
+                }
+            });
+
+            nextButton.textContent = currentQuestionIndex === spaceQuestions.length - 1 ? 'Submit' : 'Next';
+            checkMode = false;
+        } else {
+            alert('Please select an option before proceeding to the next question.');
         }
-
+    } else {
         if (currentQuestionIndex < spaceQuestions.length - 1) {
             currentQuestionIndex++;
             displayQuestion();
         } else {
             displayResult();
         }
-    } else {
-        alert('Please select an option before proceeding to the next question.');
     }
 }
 
@@ -115,6 +128,11 @@ function displayResult() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const scoreDisplay = document.createElement('div');
+    scoreDisplay.className = 'score';
+    scoreDisplay.textContent = `Score: ${score}`;
+    document.querySelector('.quiz-category-container').prepend(scoreDisplay);
+
     displayQuestion();
 
     const nextButton = document.querySelector('.next-button');
